@@ -217,6 +217,7 @@ public class Player : MonoBehaviour
 
     public void Equip(Weapon weapon)
     {
+        // Trang bi vu khi moi va cap nhat chi so.
         source.clip = pickupSound;
         source.Play();
         damage = weapon.damage;
