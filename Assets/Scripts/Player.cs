@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Cinemachine.DocumentationSortingAttribute;
 
+// Dieu khien nhan vat: di chuyen, nhay, danh, nhan sat thuong.
 public class Player : MonoBehaviour
 {
 	public float speed;
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		// Lay cac component can thiet khi bat dau.
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
@@ -92,7 +94,7 @@ public class Player : MonoBehaviour
 			Destroy(gameObject);
 		}
 
-		// lay gia tri theo chieu ngang khi nhan nut phai/trai, phai = 1, trai = -1
+        // Lay input va di chuyen theo truc ngang.
 		float input = Input.GetAxisRaw("Horizontal");
         // di chuyen theo chieu ngang truc x, y giu nguyen
         rb.linearVelocity = new Vector2(input*speed, rb.linearVelocity.y);
@@ -108,7 +110,8 @@ public class Player : MonoBehaviour
             facingRight = !facingRight;
         }
 
-        if (input != 0)
+		// Cap nhat animation chay/dung.
+		if (input != 0)
         {
             animator.SetBool("isRunning", true);
         }
@@ -117,7 +120,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isRunning", false);
         }
 
-        // OverlapCircle kiem tra co collider nao trong vung hinh tron cuar Player ko.=> return collider dau tien gap trong cung hinh tron
+        // Kiem tra dang cham dat.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         if (isGrounded == true)
@@ -129,7 +132,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
 
-        // khi nhan nut len
+		// Nhay khi dang cham dat.
         if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded == true)
         {
             rb.linearVelocity = Vector2.up * jumpForce;
