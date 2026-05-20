@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		// Xu ly tan cong theo cooldown.
         if(Time.time > nextAttackTime)
         {
             if(Input.GetKeyDown(KeyCode.Space))
@@ -197,6 +198,7 @@ public class Player : MonoBehaviour
 
     public void Attack()
     {
+        // Quet enemy trong vung tan cong.
         // tim tat ca cac doi tuong tai vi tri attackPoint, ban kinh attackRange(xac dinh boi OverlapCircleAll) va cham toi, thuoc lop enemyLayer
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
         foreach(Collider2D col in enemiesToDamage)
