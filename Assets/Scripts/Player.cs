@@ -140,7 +140,8 @@ public class Player : MonoBehaviour
             source.Play();
         }
 
-        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
+		// Kiem tra va cham tuong de wall slide.
+		isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
         if(isTouchingFront == true && isGrounded==false && input != 0)
         {
             wallSliding = true;
@@ -150,7 +151,7 @@ public class Player : MonoBehaviour
             wallSliding = false;
         }
 
-        if(wallSliding)
+		if(wallSliding)
         {
             //Mathf.Clamp(gia tri can kep, min, max)
             //-tra ve chinh no neu giua min va max,< min=>min, >max => max
@@ -160,6 +161,7 @@ public class Player : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.UpArrow) && wallSliding == true)
         {
+            // Bat dau wall jump va tu tat sau wallJumpTime.
             wallJumping = true;
             Invoke("SetWallJumpingToFalse", wallJumpTime);//invoke la goi method sau 1 khoang thoi gian=> xong tg nhay thi tuot xuong
         }
