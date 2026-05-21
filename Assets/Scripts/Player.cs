@@ -183,6 +183,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        // Phat am thanh, rung camera va tru mau.
         source.clip = hurtSound;
         source.Play();
         FindObjectOfType<CameraShake>().Shake();
