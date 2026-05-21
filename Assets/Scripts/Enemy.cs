@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Collections.AllocatorManager;
 
+// Lop enemy co ban: sat thuong va mau.
 public class Enemy : MonoBehaviour
 {
     public int damage;
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour
 	public GameObject blood;
 	private void OnTriggerEnter2D(Collider2D collision)
     {
+		// Gay sat thuong khi cham Player.
         if (collision.tag == "Player")
         {
             collision.GetComponent<Player>().TakeDamage(damage);
@@ -18,6 +20,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+		// Tru mau va kiem tra chet.
         health -= damage;
         if (health < 0)
 		{

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Enemy tuan tra va tan cong khi player o phia truoc.
 public class AttackEnemy : Enemy
 {
     public Transform attackPoint;
@@ -22,6 +23,7 @@ public class AttackEnemy : Enemy
     void Start()
     {
         anim = GetComponent<Animator>();
+        // Tim Player de tinh khoang cach tan cong.
         player = GameObject.FindGameObjectWithTag("Player");
         //vi tri bat dau cua monster la diem tuan tra(patrol point) dau tien
         transform.position = patrolPoints[0].position;
@@ -57,6 +59,7 @@ public class AttackEnemy : Enemy
 
             if (distanceToPlayer < distanceToAttack && angleToPlayer < 0) // Player is within attack distance and in front of the monster
             {
+                // Danh theo cooldown, chi khi player dung dung huong.
                 if (Time.time > nextAttackTime)
                 {
                     anim.SetTrigger("attack");
@@ -95,6 +98,7 @@ public class AttackEnemy : Enemy
             }
             else
             {
+                // Dung tai diem tuan tra trong mot khoang thoi gian.
                 waitTime -= Time.deltaTime;
             }
         }
