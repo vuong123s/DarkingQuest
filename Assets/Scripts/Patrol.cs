@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Enemy tuan tra giua cac diem.
 public class Patrol : Enemy
 {
     public Transform[] patrolPoints;// diem de monster di qua lai tuan tra
@@ -52,6 +53,7 @@ public class Patrol : Enemy
             }
             else
             {
+                // Giam dan thoi gian dung tai diem tuan tra.
                 waitTime -= Time.deltaTime;
             } 
         }
