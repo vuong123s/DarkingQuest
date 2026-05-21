@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Dan bay gay sat thuong va tu huy.
 public class Fireball : MonoBehaviour
 {
     public float speed;
@@ -17,7 +18,8 @@ public class Fireball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		//transform.Translate(Vector2.right * speed * Time.deltaTime);
+        // Dan bay theo huong ben trai (co the doi theo asset).
+        //transform.Translate(Vector2.right * speed * Time.deltaTime);
 		transform.Translate(Vector2.left * speed * Time.deltaTime);
 
 	}
@@ -31,6 +33,7 @@ public class Fireball : MonoBehaviour
             collision.GetComponent<Player>().TakeDamage(damage);
         }
 
+        // Huy dan sau khi va cham.
         Destroy(gameObject);
 	}
 }
