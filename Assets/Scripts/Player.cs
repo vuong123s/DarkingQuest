@@ -81,7 +81,8 @@ public class Player : MonoBehaviour
             }
 
         }
-		if (transform.position.y< minY)//tro lai ve vi tri cu khi roi xuong
+        // Neu roi qua do cao, tru mau va dua ve vi tri ban dau.
+        if (transform.position.y< minY)//tro lai ve vi tri cu khi roi xuong
 		{
 			health -= damage;
 			transform.position = initialPosition;
@@ -228,6 +229,7 @@ public class Player : MonoBehaviour
     }
     void GameOver()
     {
+        // Hien panel game over.
         gameOverPanel.SetActive(true);
 
     }
