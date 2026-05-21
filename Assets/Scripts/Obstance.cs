@@ -32,11 +32,11 @@ public class Obstance : MonoBehaviour
 	}
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Cell_bottom")
+		if (collision.gameObject.CompareTag("Cell_bottom"))
 		{
 			checkCeil = false;
 		}
-		if (collision.gameObject.tag == "Cell_top")
+		if (collision.gameObject.CompareTag("Cell_top"))
 		{
 
 			checkCeil = true;
@@ -45,7 +45,7 @@ public class Obstance : MonoBehaviour
 	//private void OnTriggerEnter2D(Collider2D collision)
 	//{
 	//	neu fireball cham vao player thi player se nhan sat thuong
-	//	if (collision.tag == "Player")
+	//	if (collision.CompareTag("Player"))
 	//	{
 	//		collision.GetComponent<Player>().TakeDamage(damage);
 	//		Instantiate(blood, transform.position, Quaternion.identity);
