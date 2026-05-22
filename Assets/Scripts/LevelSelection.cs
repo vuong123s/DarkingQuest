@@ -11,6 +11,11 @@ public class LevelSelection : MonoBehaviour
     }
     public void LoadLevel(string sceneName)
 	{
+        if (string.IsNullOrWhiteSpace(sceneName))
+        {
+            Debug.LogError("LevelSelection.LoadLevel: sceneName is empty.");
+            return;
+        }
 		SceneManager.LoadScene(sceneName);
 	}
 }
