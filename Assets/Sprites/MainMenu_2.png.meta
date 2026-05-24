@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 6cd75cad57f32fc4a811b50ba74947c4
+guid: 8c8b2d780fc25ba4b9b5870ec6f2e43d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -39,7 +39,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -67,7 +67,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -80,34 +80,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,69 +97,65 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainMenu 1_0
+      name: MainMenu_2_0
       rect:
         serializedVersion: 2
-        x: 173
-        y: 343
-        width: 954
-        height: 229
+        x: 64
+        y: 178
+        width: 589
+        height: 159
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 59, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d84c0a4e2c42c9d45a5546939693dc0c
-      internalID: 851453355
+      spriteID: 316a00d981ed35f409c9439c2b5da290
+      internalID: -1675962587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu 1_1
+      name: MainMenu_2_1
       rect:
         serializedVersion: 2
-        x: 291
-        y: 4
-        width: 693
-        height: 340
+        x: 68
+        y: 0
+        width: 527
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9adaa7f78b13f6540a624d5372fee600
-      internalID: 1374503538
+      spriteID: fa29871ab498a96428bf28844b90555e
+      internalID: 1396436662
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 205a7a4a2eaacb148b9196f297bbcd4a
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      MainMenu 1_0: 851453355
-      MainMenu 1_1: 1374503538
-      MainMenu 1_10: 1340681251
-      MainMenu 1_2: 2042130251
-      MainMenu 1_3: -649753510
-      MainMenu 1_4: -988497695
-      MainMenu 1_5: 252547162
-      MainMenu 1_6: 437375000
-      MainMenu 1_7: -1639291352
-      MainMenu 1_8: -65347531
-      MainMenu 1_9: -414024125
+      MainMenu_2_0: -1675962587
+      MainMenu_2_1: 1396436662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
