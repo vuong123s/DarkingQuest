@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Cinemachine.DocumentationSortingAttribute;
 
 // Dieu khien nhan vat: di chuyen, nhay, danh, nhan sat thuong.
 public class Player : MonoBehaviour
